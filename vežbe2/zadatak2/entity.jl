@@ -21,17 +21,18 @@ function calculateFitness!(entity, values, weights, maxCapacity)
     sumSelectedWeights = sum(selectedWeights)
     if sumSelectedWeights > maxCapacity
         entity.fitness = sum(values)
-		# fitness stavi na najveći mogući tako što ćeš sabrati APSOLUTNO SVE VREDNOSTI
+	# fitness stavi na najveći mogući tako što ćeš sabrati APSOLUTNO SVE VREDNOSTI
     else
         notSelectedValues = values[entity.genes .== 0]
         entity.fitness = sum(notSelectedValues)	
-		# u suprotnom saberi neizabrano kamenje (tj izaberi to kamenje kao rešenje)
-		# u prevodu, recimo da je maksimalna suma kamenja 100, i ti ako sabereš sva neizabrano kamenje, ti ćeš imati vrednost 4, a možeš imati i 40 - bolja vrednost je 4 jer je bliža maksimumu sume (tj više vrednosti si natrpala)
+	# u suprotnom saberi neizabrano kamenje (tj izaberi to kamenje kao rešenje)
+	# u prevodu, recimo da je maksimalna suma kamenja 100, i ti ako sabereš sva neizabrano kamenje, ti ćeš imati vrednost 4
+	# a možeš imati i 40 - bolja vrednost je 4 jer je bliža maksimumu sume (tj više vrednosti si natrpala)
     end
 end
 
 function crossover!(entity1, entity2, crossoverPoint1, crossoverPoint2)
-    for i in (crossoverPoint1 + 1):crossoverPoint2				# crossover od tačke(+1) do tačke, a ne od tačke do kraja
+    for i in (crossoverPoint1 + 1):crossoverPoint2
         x = entity1.genes[i]
         entity1.genes[i] = entity2.genes[i]
         entity2.genes[i] = x
