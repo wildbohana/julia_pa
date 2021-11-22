@@ -61,9 +61,9 @@ function updatePosition!(particle, targetValue)
         particle.values[i] += particle.velocity[i]
 
         if particle.values[i] > 1
-            particle.values[i] = 1.0						# vrednost pozicije mora biti između 1.0 (maxRang)
+            particle.values[i] = 1.0					# vrednost pozicije mora biti između 1.0 (maxRang)
         elseif particle.values[i] < -1
-            particle.values[i] = -1.0						# i -1.0 (minRang)
+            particle.values[i] = -1.0					# i -1.0 (minRang)
         end
     end
     updateValue!(particle)
