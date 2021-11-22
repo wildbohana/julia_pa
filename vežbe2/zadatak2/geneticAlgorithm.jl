@@ -22,7 +22,7 @@ function geneticAlgorithm!(data, elitePercentage, crossoverPoint1, crossoverPoin
 
     # Ako je broj jedinki elite neparan, dodaj jos jednu jedinku do parnog broja
     eliteSize = eliteSize + (populationSize - eliteSize) % 2
-   # JEBO MAMU SVOJU ZAŠTO NIKO NIJE REKAO DA POPULATIONSIZE MORA BITI PARAN BROJ DA BI POLA KODA KURCU VALJALO?
+    # JEBO MAMU SVOJU ZAŠTO NIKO NIJE REKAO DA POPULATIONSIZE MORA BITI PARAN BROJ DA BI POLA KODA KURCU VALJALO?
 
     bestFits = [data[1].fitness]
 
