@@ -29,7 +29,7 @@ function mutation!(entity, mutationPercentage)
     if rand(Float64) < mutationPercentage
         mutationPoint = rand(1:length(entity.genes))
         entity.genes[mutationPoint] = 1 - entity.genes[mutationPoint]
-		# invertovanje po matematički
+	# invertovanje po matematički
     end
 end
 
