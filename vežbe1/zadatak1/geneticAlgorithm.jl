@@ -22,8 +22,8 @@ function geneticAlgorithm!(data, elitePercentage, crossoverPoint, mutationPercen
         data = [data; elite]
         calculatePopulationFitness!(data)
         
-		popGen += 1
-		println("Generacija $popGen bestFit $bestFit broj ponavljanja $repeatNum")
+	popGen += 1
+	println("Generacija $popGen bestFit $bestFit broj ponavljanja $repeatNum")
 
         if abs(bestFit - data[1].fitness) < 0.01
             repeatCount += 1
