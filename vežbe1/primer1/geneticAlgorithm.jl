@@ -15,10 +15,10 @@ function geneticAlgorithm!(data, fitValue, selectionSize, crossoverPoint, mutati
         mutatePopulation!(data, mutationPercentage)
         calculatePopulationFitness!(data, fitValue)
 		
-		popGen += 1
+	popGen += 1
         print("Generacija $popGen, bestFit $bestFit, broj ponavljanja $repeatCount ")
         
-		if bestFit == data[1].fitness
+	if bestFit == data[1].fitness
             repeatCount += 1
         else
             bestFit = data[1].fitness
