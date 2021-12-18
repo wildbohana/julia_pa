@@ -27,3 +27,4 @@ end
 
 averageAbsMeanErrorTest /= k
 println("Prosečna apsolutna greška za $k testiranja je: $averageAbsMeanErrorTest")
+
