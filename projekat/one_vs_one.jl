@@ -1,5 +1,3 @@
-# PR83 Bojana Mihajlovic, Grupa2
-
 # One-vs-one klasifikacija
 # 1. Prouči kako funkcioniše zadati algoritam						+
 # 2. Logistička regresija + višestruka klasifikacija				+
